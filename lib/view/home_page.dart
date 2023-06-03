@@ -1,3 +1,4 @@
+import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:language_and_themes/provider/home_provider.dart';
@@ -32,6 +33,12 @@ class HomePage extends StatelessWidget {
             },
             leading: const Icon(Icons.language_outlined),
             title: Text(context.locale.languageCode.toString()),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              AdaptiveTheme.of(context).setDark();
+            },
+            child: const Text("Change Theme"),
           ),
 
           //////////////////////////////////////////////////////////////////
